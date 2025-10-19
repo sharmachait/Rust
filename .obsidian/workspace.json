@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "69fecbeb87b8ad38",
+    "type": "split",
+    "children": [
+      {
+        "id": "c2aa68b61a5107b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f84626ca71dba950",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03 structs and traits.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03 structs and traits"
+            }
+          },
+          {
+            "id": "d1148029fb74096b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "06 Enums and pattern matching.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06 Enums and pattern matching"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9290c0ce31f5cdd3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f1cff200378f3ab7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "476044fce1fff4b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6d4b4689ee9b930f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "enumerate",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d6f363e9fb6d2c18",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2b7a51823f9d893f",
+    "type": "split",
+    "children": [
+      {
+        "id": "98597806f370a066",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86514f18247f1798",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01 Basics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 01 Basics"
+            }
+          },
+          {
+            "id": "96e6149ed3cbea49",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01 Basics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 01 Basics"
+            }
+          },
+          {
+            "id": "9c6f902c5f834d7c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a2f9cf986998a578",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01 Basics.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 01 Basics"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "d1148029fb74096b",
+  "lastOpenFiles": [
+    "04 Type casting and assertion.md",
+    "01 Basics.md",
+    "06 Enums and pattern matching.md",
+    "03 structs and traits.md",
+    "05 Collections.md",
+    "00 CARGO and TOML.md",
+    "02 memory management.md",
+    "Pasted image 20251017202054.png",
+    "Pasted image 20251014092734.png",
+    "Pasted image 20251011202529.png"
+  ]
+}
