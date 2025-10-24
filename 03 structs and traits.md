@@ -118,6 +118,13 @@ fn make_noise<T: Noisy>(item: T) {
 
 make_noise(RedFox {enemy:false, life: 80});
 ```
+the generic T can be forced to implement multiple traits
+
+```rust
+fn make_noise<T: Noisy + Sound>(item: T){
+	println!("{}", item.be_noisy());
+}
+```
 
 we can actually impl any trait for any struct as long as either the struct or the trait is defined in our project
 ```rust
@@ -188,3 +195,46 @@ println!("{:?}", carrot);
 ```
 and it will look like
 `Carrot { percent_left: 80.0 }`
+
+```rust
+#[derive(Debug)]
+struct Person {
+    name: String,
+    age: u32,
+}
+
+fn main() {
+    let person = Person {
+        name: String::from("Alice"),
+        age: 30,
+    };
+    
+    println!("{:?}", person);        // Debug format
+    println!("{:#?}", person);       // Pretty-print Debug format
+}
+```
+
+or we can implement the Display trait for the struct
+```rust
+use std::fmt;
+
+struct Person {
+    name: String,
+    age: u32,
+}
+
+impl fmt::Display for Person {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{} (age {})", self.name, self.age)
+    }
+}
+
+fn main() {
+    let person = Person {
+        name: String::from("Alice"),
+        age: 30,
+    };
+    
+    println!("{}", person);  // Uses Display trait
+}
+```

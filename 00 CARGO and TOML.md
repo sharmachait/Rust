@@ -59,6 +59,8 @@ fn main(){
 it is also how we need to bringing the std library
 
 we can bring in crates by adding them to dependencies in the TOML file and using them like libraries
+or use the command
+`cargo add <crate-name>`
 ```toml
 [package]  
 name = "untitled"  
@@ -76,3 +78,11 @@ fn main(){
 	greet();
 } 
 ```
+
+## popular libraries
+1. actix - http framework like express
+2. serde - serialization
+3. tokio - async
+4. reqwest - send http requests
+5. sqlx - connect to databases
+6. chrono - for data time stuff

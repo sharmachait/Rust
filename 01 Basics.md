@@ -212,7 +212,12 @@ we can get the length of an array with
 ```rust
 buf.len();
 ```
-
+we can slice arrays as well
+```rust
+let a = [1,2,3,4,5,5];
+let b= &a[0..3];
+```
+and vecs as well
 ## String
 there are 6 types of string in rust, we care about 2
 - &str 
@@ -221,6 +226,14 @@ there are 6 types of string in rust, we care about 2
 	- the data in a borrowed string slice can not be modified
 	- its just a pointer to some bytes and the length
 	- subset of String
+```rust
+let s = "hello world".to_string();
+let slice = &s[0..5];
+s.clear();
+println!("{}", slice);
+```
+string literals are slices, that is why they are immutable
+this wont work because it still refers to the original string which we cleared
 - String
 	- can be modified, use when you want to do manipulations
 	- is a pointer to some bytes, a length and capacity

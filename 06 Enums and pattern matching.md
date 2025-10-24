@@ -164,3 +164,16 @@ impl Shot {
 ```
 
 the second only matches if x < 3.o other wise the control goes to the third match
+
+```rust
+let mut shot = if a.distance_from_center() < 1.0 {Shot::Bullseye }  
+                else if a.distance_from_center() < 5.0 {Shot::Hit(a.distance_from_center()) }  
+                else { Shot::Miss };  
+  
+  
+shot = match a.distance_from_center() {  
+    x if x < 1.0 => Shot::Bullseye,  
+    x if x< 5.0 => Shot::Hit(x),  
+    _ => Shot::Miss  
+};
+```
