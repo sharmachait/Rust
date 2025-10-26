@@ -10,10 +10,11 @@ variables are immutable by default in rust
 
 we can make variable mutable with `mut`
 ```rust
+const X: i32= (1-2);
 fn main() {  
     let mut bunnies: i32 = 5;  
-    bunnies = 5;  
-    println!("Hello, world!");  
+    bunnies = 6;  
+    println!("Hello, world! {}", bunnies);  
 }
 ```
 ### const
@@ -21,7 +22,7 @@ type definitions are required
 use CAPS_SNAKE case
 the value must be a constant expression that can be determined at compile time
 ```rust
-const X: i32= 1;
+const X: i32= (1-2);
 ```
 
 benefits of const
@@ -29,7 +30,7 @@ benefits of const
 - consts are inlined at compile time so are very fast
 ### printing
 ```rust
-println!("Hello, world!");
+print!("Hello, world!");
 println!("{}, {}", x, y);
 ```
 ### scopes
@@ -37,17 +38,17 @@ when variables goes out of scope it is immediately dropped, without waiting for 
 
 its possible to redeclare variables in the same scope
 ```rust
-let x= 5;
-let x=x+1;
+let x: i8 = 5;
+let x: i64 = x+1;
 
-let x=5;
-let mut x=x;
+let x = 5;
+let mut x = x;
 
-let mut x=1;
-let x=x;
+let mut x = 1;
+let x = x;
 
-let mut x=1;
-let mut x=4;
+let mut x = 1;
+let mut x = 4;
 ```
 
 its even possible to change the type of the variable when re declaring
@@ -56,6 +57,7 @@ variables must be initialized before they are used
 ```rust
 fn main(){
 	let enigma:i32;
+	
 	println!("{}", enigma); //error!
 }
 ```
@@ -86,7 +88,7 @@ fn main(){
 ```
 while in c we get default garbage value
 
-the `mut` key word can go into pattermatching when declaring variables
+the `mut` key word can go into pattern matching when declaring variables
 ```rust
 let (mut a, b) = (1,2);
 ```
@@ -137,7 +139,7 @@ but macros do like println!
 - i128
 - isize ->
 	- used to calculate differences between pointers
-	- and to address every byte in a value like  a struct
+	- and to address every byte in a value like a struct
 ##### floats
 - f32
 - f64 -> default
@@ -215,7 +217,8 @@ buf.len();
 we can slice arrays as well
 ```rust
 let a = [1,2,3,4,5,5];
-let b= &a[0..3];
+
+let b = &a[0..3];
 ```
 and vecs as well
 ## String
@@ -239,7 +242,7 @@ this wont work because it still refers to the original string which we cleared
 	- is a pointer to some bytes, a length and capacity
 	- `let m: String = "somestring".to_string();`
 	- `let m: String = String::from("some thing");`
-	- we can index to get characters because strings are UTF-8 and stored as bytes in the memory, some characters are more than a single Byte, if we were to use the array notation we would get  a single byte
+	- we cant index to get characters because strings are UTF-8 and stored as bytes in the memory, some characters are more than a single Byte, if we were to use the array notation we would get  a single byte
 	- if we want to index into the bytes we can do
 		- `word.bytes()` this returns an indexable vector of utf-8 bytes
 		- `word.chars()` this returns an iterable over unicode scalars, but some characters are more than a single unicode scalars long, like alphabets with accents or Kanji characters
@@ -253,7 +256,7 @@ this wont work because it still refers to the original string which we cleared
 		- we can do pattern matching to handle it gracefully
 ```rust
 let c: Option<char> = word.chars().nth(0);
-match c{
+match c {
 	Some(ch) => print!("{}", ch),
 	None => print!("none")
 }
@@ -288,6 +291,7 @@ ownership when appending strings
 let s1 = String::from("hello");
 let s2 = " world";
 let s3 = s1 + s2; // s1 is moved here, can't use it anymore
+
 println!("{}", s3); // "hello world"
 ```
 s1 cant be used again after s3 declaration

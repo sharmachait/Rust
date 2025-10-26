@@ -1,4 +1,3 @@
-![[Pasted image 20251011202529.png]]
 for debug version
 > cargo run
 
@@ -31,9 +30,10 @@ like so
 
 main.rs
 ```rust
+use codecrafters_bittorrent::greet;
 fn main(){
-	hello::greet();
-} 
+	greet();
+}
 ```
 where lib.rs
 ```rust
@@ -79,10 +79,4 @@ fn main(){
 } 
 ```
 
-## popular libraries
-1. actix - http framework like express
-2. serde - serialization
-3. tokio - async
-4. reqwest - send http requests
-5. sqlx - connect to databases
-6. chrono - for data time stuff
+## Moduling example in a real project

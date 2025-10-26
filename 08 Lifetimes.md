@@ -152,3 +152,42 @@ fn main() {
     } 
 }
 ```
+
+String literals have `'static` lifetime - they live for the entire duration of the program
+
+so when we write
+```rust
+fn main(){
+	let s = "hi";
+}
+```
+
+its owned by the process because string literals are stored in the binary and are just referenced by the variables
+
+sometimes compiler can infer lifetimes
+when it cant is when we need to specify lifetimes
+
+```rust
+struct ImportantExcerpt<'a>{
+	part: &'a str,
+}
+```
+
+the struct object must not outlive the reference we set into part
+
+```rust
+struct ImportantExcerpt<'a>{
+	part: &'a str,
+}
+
+impl<'a> ImportantExcerpt<'a> {
+	fn return_part(&self, announcement: &str) -> &str{
+		println!("{}", announcement);
+		self.part
+	}
+}
+```
+
+for a method, when ever the is a reference to self in the input parameters then its lifetime is automatically applied to the return value as well
+
+which means the returned reference is valid till the object it was returned from is valid

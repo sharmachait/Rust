@@ -52,7 +52,7 @@ v.iter().map(|x: &i32| x*3)
 fold reduces the dimensions of the iterator
 if you just want to turn an iterator into a vector use .collect instead
 
-## Threading
+## Multithreading
 ```rust
 use std::thread;
 fn main(){
@@ -68,3 +68,39 @@ fn main(){
 ```
 this is an example of OS threads which are heavy
 async await are better suited for a IO tasks
+
+the .join() method waits for the thread to finish
+
+### Channels and Message passing between threads
+in the above example we passed data from creator thread to the created thread, but how to pass data back ?
+done through Channels
+a channel consists of a transmitter and a receiver
+
+```rust
+fn main(){  
+    let (tx, rx) = std::sync::mpsc::channel();  
+  
+    std::thread::spawn(move ||{  
+        let val = String::from("HI");  
+        tx.send(val).unwrap();  
+    });  
+    let received = rx.recv().unwrap();  
+    println!("{:?}", received);  
+}
+```
+rx.recv is thread blocking
+after receiving the string, the main thread owns the string
+
+if we want to produce from multiple threads, we can tx.clone() the transmitter
+
+and we can wait for all the transmission with
+```rust
+for received in rx {}
+```
+
+if the original transmitter (not the clone) is not moved to any specific thread
+then it will infinitely block the receiver thread
+because the transmitter is not dropped from scope and rust doesnt know how many more messages are gonna be produced until there is even one transmitter still in memory
+if the OG transmitter is not moved over to any other thread then we need to drop it manually to unblock the main thread at receive with
+drop(tx);
+after passing its clones to other threads
