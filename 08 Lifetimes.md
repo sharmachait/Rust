@@ -1,3 +1,30 @@
+![[Pasted image 20251030000759.png]]
+better way to imagine lifetimes
+![[Pasted image 20251030000712.png]]
+r points to x shares the lifetime of x and so is only valid till x is valid
+
+instead of thinking of when the reference is valid in lines of code
+think of what can it point to as in which region of memory
+
+![[Pasted image 20251030002047.png]]
+![[Pasted image 20251030003104.png]]
+`&mut self` → means “temporarily borrow the iterator to call next()”.
+`&'a mut self` → means “borrow the iterator for as long as `'a` (the lifetime of the underlying string)”.
+![[Pasted image 20251030004901.png]]
+in the above example we want the returned str to outlive both s1 and s2
+
+without constraints
+![[Pasted image 20251030005015.png]]
+what we want is 
+![[Pasted image 20251030005035.png]]
+
+s1 subset of out translates to
+```rust
+where
+	's1: 'out,
+	's2: 'out,
+```
+
 ```rust
 fn main(){
 	let ans;
@@ -109,7 +136,7 @@ fn main(){
   
 fn longest<'a, 'b>(x: &'a str , y: &'b str) -> &'a str  
 where  
-    'b: 'a // this means b must outlive a
+    'b: 'a // this means b is subset of a
 {  
     if x.len() > y.len() {  
         x  
@@ -130,7 +157,7 @@ struct Parser<'a> {
 impl<'a> Parser<'a> {  
     fn longest<'b>(&'a self, other: &'b str) -> &'a str  
     where        
-	    'b: 'a  // 'b must outlive 'a  
+	   'b : 'a // this means b is subset of a
     {  
         if self.text.len() > other.len() {  
             self.text  

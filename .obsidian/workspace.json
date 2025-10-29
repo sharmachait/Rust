@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10 Testing.md",
+                "file": "08 Lifetimes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "10 Testing"
+              "title": "08 Lifetimes"
             }
           }
         ],
@@ -186,20 +186,27 @@
   },
   "active": "e6274aa14ae7675e",
   "lastOpenFiles": [
-    "08 Lifetimes.md",
-    "10 Testing.md",
+    "Pasted image 20251030005035.png",
+    "Pasted image 20251030005015.png",
+    "Pasted image 20251030004901.png",
+    "Pasted image 20251030003104.png",
+    "Pasted image 20251030002047.png",
+    "Pasted image 20251030000759.png",
+    "Pasted image 20251030000712.png",
+    "Pasted image 20251030000658.png",
+    "Pasted image 20251030000505.png",
     "07 Closures, Multithreading and Channels.md",
     "06 Enums and pattern matching.md",
+    "05 Collections.md",
     "04 Type casting and assertion.md",
     "03 structs and traits.md",
+    "02 memory management.md",
     "01 Basics.md",
+    "08 Lifetimes.md",
+    "10 Testing.md",
     "00 CARGO and TOML.md",
     "09 Async Await concurrency.md",
     "Pasted image 20251023230812.png",
-    "05 Collections.md",
-    "02 memory management.md",
-    "Pasted image 20251017202054.png",
-    "Pasted image 20251014092734.png",
-    "Pasted image 20251011202529.png"
+    "Pasted image 20251017202054.png"
   ]
 }
