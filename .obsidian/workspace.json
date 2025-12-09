@@ -11,10 +11,14 @@
             "id": "52065043b19ff9da",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "code for video.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "code for video"
             }
           }
         ]
@@ -167,12 +171,19 @@
   },
   "active": "52065043b19ff9da",
   "lastOpenFiles": [
-    "08 Lifetimes.md",
+    "02 memory management.md",
+    "01 Basics.md",
+    "00 CARGO and TOML.md",
     "rdb/02. processes.md",
     "rdb/01. context.md",
-    "01 Basics.md",
-    "05 Collections.md",
+    "rdb/00. setup.md",
+    "code for video.md",
     "03 structs and traits.md",
+    "09 Async Await concurrency.md",
+    "10 Testing.md",
+    "07 Closures, Multithreading and Channels.md",
+    "08 Lifetimes.md",
+    "05 Collections.md",
     "rdb/00 setup.md",
     "rdb",
     "Pasted image 20251030005035.png",
@@ -184,13 +195,8 @@
     "Pasted image 20251030000712.png",
     "Pasted image 20251030000658.png",
     "Pasted image 20251030000505.png",
-    "07 Closures, Multithreading and Channels.md",
     "06 Enums and pattern matching.md",
     "04 Type casting and assertion.md",
-    "02 memory management.md",
-    "10 Testing.md",
-    "00 CARGO and TOML.md",
-    "09 Async Await concurrency.md",
     "Pasted image 20251023230812.png"
   ]
 }
