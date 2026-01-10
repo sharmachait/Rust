@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4074d4820099f0b6",
+        "id": "05ab1da7840fd890",
         "type": "tabs",
         "children": [
           {
-            "id": "52065043b19ff9da",
+            "id": "221d6e6c590849ed",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "code for video.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "code for video"
+              "title": "New tab"
             }
           }
         ]
@@ -169,15 +165,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "52065043b19ff9da",
+  "active": "221d6e6c590849ed",
   "lastOpenFiles": [
+    "{370A3778-DB2B-4E31-856C-BBA1126E8B0B}.png",
+    "Script.md",
+    "{A081C1B2-A756-4636-A4CC-2B0268803F1E}.png",
+    "{B8CAE024-9716-47D3-AB33-121D774930F7}.png",
+    "{067D8723-39F2-4C29-B300-CCB46791F0A5}.png",
+    "{949A6EA2-FB37-44BA-B8E1-B41352B4C894}.png",
+    "{04DE31AB-C757-4234-B2B7-7295017F7238}.png",
+    "{9AD72B46-D6A2-4E89-AE2A-0A4908F8DBA5}.png",
+    "{B91A33C0-3541-4839-B305-855B3611B6F3}.png",
+    "{A6BA3E28-3AB8-47CA-A1A4-1245BCFCE3BA}.png",
+    "{A6A736B7-4C7E-4089-9705-0AF9FA36F592}.png",
+    "nvim.md",
+    "neovim setup.md",
     "02 memory management.md",
     "01 Basics.md",
     "00 CARGO and TOML.md",
     "rdb/02. processes.md",
     "rdb/01. context.md",
     "rdb/00. setup.md",
-    "code for video.md",
     "03 structs and traits.md",
     "09 Async Await concurrency.md",
     "10 Testing.md",
@@ -186,17 +194,7 @@
     "05 Collections.md",
     "rdb/00 setup.md",
     "rdb",
-    "Pasted image 20251030005035.png",
-    "Pasted image 20251030005015.png",
-    "Pasted image 20251030004901.png",
-    "Pasted image 20251030003104.png",
-    "Pasted image 20251030002047.png",
-    "Pasted image 20251030000759.png",
-    "Pasted image 20251030000712.png",
-    "Pasted image 20251030000658.png",
-    "Pasted image 20251030000505.png",
     "06 Enums and pattern matching.md",
-    "04 Type casting and assertion.md",
-    "Pasted image 20251023230812.png"
+    "04 Type casting and assertion.md"
   ]
 }
